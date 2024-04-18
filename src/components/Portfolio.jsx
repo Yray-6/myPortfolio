@@ -51,7 +51,7 @@ export default function Portfolio() {
         ></motion.div>
       </div>
       {items.map((item) => (
-        <SingleChild item={item} />
+        <SingleChild item={item} key={item.id} />
       ))}
     </div>
   );

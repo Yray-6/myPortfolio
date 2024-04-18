@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef,useState } from "react";
 import emailjs from '@emailjs/browser';
 
+
 const variants = {
   initial: {
     y: 500,
@@ -25,6 +26,8 @@ export default function Contact() {
   const formRef = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
+  
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -46,7 +49,7 @@ export default function Contact() {
 
   return (
     <motion.div
-      className="max-w-[1366px] flex justify-between items-center m-auto h-full"
+      className="max-w-[1366px] relative flex justify-between items-center m-auto h-full"
       variants={variants}
       ref={ref}
       initial="initial"

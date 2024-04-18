@@ -6,12 +6,12 @@ export default function Navbar() {
   return (
     <div className="h-[100px]">
       <Sidebar />
-      <div className=" max-w-[1366px] m-auto flex justify-between rapper h-[100%]">
+      <div className=" max-w-[1366px] m-auto flex justify-end lg:justify-between rapper h-[100%] px-5">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className=" font-bold"
+          className=" font-bold lg:block hidden"
         >
           Y-ray Tech
         </motion.span>

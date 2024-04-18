@@ -23,10 +23,10 @@ export default function Parallax({ type }) {
             : "linear-gradient(180deg,#111132,#505064)",
       }}
     >
-      <motion.h1 style={{ y: yText }} className=" text-[100px] font-bold">
+      <motion.h1 style={{ y: yText }} className=" lg:text-[100px] text-[70px] text-center font-bold">
         {type === "services" ? "What We Do?" : "What We've Done?"}
       </motion.h1>
-      <motion.div className="mountains absolute"></motion.div>
+      <motion.div className="mountains lg:bg-cover bg-contain bg-bottom bg-no-repeat absolute"></motion.div>
       <motion.div
         style={{
           y: yBg,
@@ -34,7 +34,7 @@ export default function Parallax({ type }) {
             type === "services" ? "/planets.png" : "/sun.png"
           })`,
         }}
-        className="planets absolute"
+        className="planets  absolute"
       ></motion.div>
       <motion.div style={{ x: yBg }} className="stars absolute"></motion.div>
     </div>

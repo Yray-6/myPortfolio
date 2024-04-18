@@ -20,21 +20,21 @@ export default function Services() {
   const isInView = useInView(ref, { margin: "-100px" });
   return (
     <motion.div
-      className="bgt h-[100%] flex flex-col justify-between"
+      className="bgt h-[100%] flex lg:mt-0 pt-5 flex-col justify-between"
       variants={textVariant}
       initial="initial"
       ref={ref}
-      animate={isInView && "animate"}
+      animate={"animate"}
     >
       <motion.div
-        className=" basis-1/5 self-end flex items-center gap-[20px]"
+        className=" basis-1/5 lg:self-end self-center text-center flex-col lg:flex-row  lg:mx-0 lg:text-left flex items-center gap-[20px]"
         variants={textVariant}
       >
-        <p className="text-[20px] font-light text-gray-500">
-          I focus On Creating seamless User Experiences <br></br> for your
+        <p className="lg:text-[20px] text-[18px] text-right px-7 font-light text-gray-500">
+          I focus On Creating seamless User Experiences for your
           business
         </p>
-        <hr className="w-[300px] border-t-2  border-gray-500"></hr>
+        <hr className="w-[300px]  border-t-2  border-gray-500"></hr>
       </motion.div>
       <motion.div
         className=" basis-2/5 flex flex-col items-center mt-[10px]"
@@ -66,7 +66,7 @@ export default function Services() {
           </button>
         </motion.div>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         className=" basis-2/5 flex max-w-[1366px] m-auto "
         variants={textVariant}
       >
@@ -130,7 +130,7 @@ export default function Services() {
             Go
           </button>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }

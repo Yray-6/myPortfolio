@@ -43,7 +43,7 @@ const variants = {
   return (
     <motion.div  className='absolute w-full h-full flex flex-col justify-center gap-[20px] items-center'  variants={variants}>
 
-        {items.map((link) =>( <motion.a href={`#${link}`} className='text-[40px]'  key={link} whileHover={{scale:1.1}} whileTap={{scale:0.5}} variants={itemVariants}>{link}</motion.a>))}
+        {items.map((link) =>( <motion.a href={`#${link}`} className='lg:text-[40px] text-[20px]'  key={link} whileHover={{scale:1.1}} whileTap={{scale:0.5}} variants={itemVariants}>{link}</motion.a>))}
 
     </motion.div>
   )

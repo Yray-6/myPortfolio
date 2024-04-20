@@ -23,7 +23,7 @@ export default function Parallax({ type }) {
             : "linear-gradient(180deg,#111132,#505064)",
       }}
     >
-      <motion.h1 style={{ y: yText }} className=" lg:text-[100px] text-[70px] text-center font-bold">
+      <motion.h1 style={{ y: yText }} className=" lg:text-[100px] text-[60px] text-center font-bold">
         {type === "services" ? "What We Do?" : "What We've Done?"}
       </motion.h1>
       <motion.div className="mountains lg:bg-cover bg-contain bg-bottom bg-no-repeat absolute"></motion.div>

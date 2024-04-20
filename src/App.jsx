@@ -21,13 +21,13 @@ const App = () => {
        <section>
         <Services />
       </section>
-      {/* <section id="Portfolio">
+     <section id="Portfolio">
         <Parallax type="p" />
       </section>
       <Portfolio />
-      <section id="Contact">
+      {/* <section id="Contact">
         <Contact />
-      </section> */} 
+      </section>   */}
     </div>
   );
 };

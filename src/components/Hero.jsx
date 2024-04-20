@@ -44,7 +44,7 @@ export default function Hero() {
       initial="initial"
       animate="animate"
     >
-      <motion.div className="m-auto max-w-[1366px] h-[100%]">
+      <motion.div className="m-auto lg:px-16 max-w-[1366px] h-[100%]">
         <motion.div
           className="flex flex-col gap-[20px] w-[100%] text-center lg:text-left h-[50%] justify-center mt-10 lg:mt-36"
           variants={textVariant}

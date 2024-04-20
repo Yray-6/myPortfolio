@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className="h-[100px]">
       <Sidebar />
-      <div className=" max-w-[1366px] m-auto flex justify-end lg:justify-between rapper h-[100%] px-5">
+      <div className=" max-w-[1366px] m-auto flex justify-end lg:justify-between rapper h-[100%] px-5 lg:px-16 ">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

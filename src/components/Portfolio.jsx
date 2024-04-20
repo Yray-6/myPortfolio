@@ -24,7 +24,7 @@ const items = [
     id: 4,
     title: "Project4",
     description: "lorem hdch d dhvchd jdvcdshc dc dhdvsdh dhs jsdhvh",
-    img: "/mock.png",
+    img: "/people.webp",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Portfolio() {
 
   return (
     <div ref={ref} className="relative">
-      <div className="sticky top-0 left-0  p-[30px] text-center text-orange-500 text-[70px] font-bold">
+      <div className="sticky top-0 left-0 pa  my-4  lg:p-[30px] text-center text-orange-500 text-[35px] lg:text-[70px] font-bold">
         Featured Works
         <motion.div
           style={{ scaleX }}
@@ -61,24 +61,26 @@ function SingleChild({ item }) {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useTransform(scrollYProgress, [0, 1], [-100,100]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
   return (
-    <section >
+    <section>
       <div className="flex justify-center items-center overflow-hidden w-full h-full">
-        <div className=" max-w-[1366px] h-[100%]  flex gap-[50px] m-auto items-center" >
-          <div ref={ref} className="h-[50%] basis-1/2">
-          <img
-            src={item.img}
-            alt="portfolio-img"
-            className="w-[700px] object-cover"
-          />
+        <div className=" max-w-[1366px] h-[100%] lg:justify-center flex flex-col lg:flex-row  lg:px-10 px-2 lg:gap-[50px] gap-[50px] lg:m-auto items-center">
+          <div ref={ref} className="lg:h-[50%] max-h-[300px] w-full lg:basis-1/2">
+            <img
+              src={item.img}
+              alt="portfolio-img"
+              className="lg:w-[700px] w-full object-cover"
+            />
           </div>
-         
 
-          <motion.div style={{ y }} className=" flex flex-col gap-[30px] basis-1/2 ">
-            <p className="text-[72px] ">{item.title}</p>
+          <motion.div
+            style={{ y }}
+            className=" flex flex-col lg:gap-[30px] gap-[30px] lg:text-left text-center lg:basis-1/2 transn"
+          >
+            <p className="lg:text-[72px] text-[40px]">{item.title}</p>
             <p className=" text-gray-500 text-[20px]">{item.description}</p>
-            <button className=" bg-orange-500 px-[30px] py-[20px] w-[180px] text-black text-[20px] font-bold rounded">
+            <button className=" self-center bg-orange-500 px-[30px] lg:py-[20px] py-[10px] w-[180px] text-black text-[20px] font-bold rounded">
               Check
             </button>
           </motion.div>

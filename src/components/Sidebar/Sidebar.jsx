@@ -3,6 +3,7 @@ import Togglebutton from './ToggleButton/Togglebutton'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Links from './Links/Links'
+import {Outlet} from 'react-router-dom'
 
 export default function Sidebar() {
 
@@ -29,11 +30,12 @@ export default function Sidebar() {
 
 
   return (
-    <motion.div animate={open ? "open":"closed"} className=' bg-white sidebar text-black' >
-        <motion.div variants={variants} className=' fixed top-0 left-0 bottom-0 bg-white z-[999] w-[200px] lg:w-[400px]'>
+    <motion.div animate={open ? "open":"closed"} className=' bg-white dark:bg-gray-300 sidebar text-black' >
+        <motion.div variants={variants} className='fixed top-0 left-0 bottom-0 bg-white dark:bg-gray-300 z-[999] w-[200px] lg:w-[400px]'>
           <Links/>
         </motion.div>
         <Togglebutton  setOpen={setOpen}/>
+        <Outlet/>
     </motion.div>
   )
 }

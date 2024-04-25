@@ -23,11 +23,6 @@ a{
     background-color: rgb(17,17,50);
 }
 
-section{
-    height: 100vh;
-    scroll-snap-align: center;
-}
-
 .rapper{
     align-items: center;
 }
@@ -53,7 +48,10 @@ section{
     z-index: 3;
 }
 
-
+.glow {
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.6);
+    /* filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)); */
+  }
 
 .planets{
     background-image: url("/public/planets.png");

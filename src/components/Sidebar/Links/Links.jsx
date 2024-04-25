@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
-export default function Links() {
+export default function Links({setOpen}) {
   const variants = {
     open: {
       transition: {
@@ -33,6 +33,7 @@ export default function Links() {
       variants={variants}
     >
       <motion.div
+        onClick={()=>setOpen(prev =>!prev)}
         className="lg:text-[40px] text-[20px]"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.5 }}
@@ -41,6 +42,7 @@ export default function Links() {
         <NavLink to="/">Home</NavLink>
       </motion.div>
       <motion.div
+        onClick={()=>setOpen(prev =>!prev)}
         className="lg:text-[40px] text-[20px]"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.5 }}

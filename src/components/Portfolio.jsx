@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React,  from "react";
 import { motion } from "framer-motion";
 
 const items = [
@@ -51,7 +51,7 @@ function SingleChild({ item }) {
           <p className="lg:text-[42px] text-[30px] text-gray-100">
             <code>{item.title}</code>
           </p>
-          <p className="text-gray-300">{item.technologies}</p>
+          <p className="text-gray-300 tracking-[0.5rem]">{item.technologies}</p>
           <p className=" text-gray-500 dark:text-bgs text-[20px]">
             <code>{item.description}</code>
           </p>

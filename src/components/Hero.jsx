@@ -87,7 +87,7 @@ export default function Hero() {
             className="flex gap-[100px] justify-center lg:justify-start mt-9  lg:px-0"
             variants={textVariant}
           >
-            <motion.a href="/public/cv.pdf" download
+            <motion.a href="/cv.pdf" download
               className=" lg:text-xl text-purple-700 hover:glow   font-bold cursor-pointer"
               variants={textVariant}
             >
@@ -111,18 +111,18 @@ export default function Hero() {
           />
           <div className="flex flex-row justify-center lg:justify-start absolute lg:relative lg:bottom-0 bottom-5 w-full  lg:gap-[30px] gap-3   lg:m-0 ">
             <a className="flex flex-row items-center cursor-pointer hover:text-purple-600" href="https://github.com/Yray-6" target="_blank">
-            <img src="/public/github.png" alt="" className="w-[30px] h-[30px]"/>
+            <img src="/github.png" alt="" className="w-[30px] h-[30px]"/>
               <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold"><code>Visit My Github Profile</code>  </p>
               <p className="lg:pe-5 ps-2 lg:hidden font-extrabold"><code>Github</code> </p>
             </a>
             <a className="flex flex-row items-center cursor-pointer hover:text-purple-600 lg:m-0 " href="https://linkedin.com/in/oghenevwaire-onobrudu-b56908262" target="_blank">
-            <img src="/public/linkedin.png" alt="" className="w-[30px] h-[30px]"/>
+            <img src="/linkedin.png" alt="" className="w-[30px] h-[30px]"/>
             <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold"><code>Linkedin</code>  </p>
             <p className="lg:pe-5 ps-2 lg:hidden font-extrabold"><code>Linkedin</code> </p>
  
             </a>
             <a className="flex flex-row items-center cursor-pointer hover:text-purple-600 lg:m-0">
-            <img src="/public/gmail.png" alt="" className="w-[30px] h-[30px]"/>
+            <img src="/gmail.png" alt="" className="w-[30px] h-[30px]"/>
             <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold"><code>Send me a Mail</code></p>
             <p className="lg:pe-5 ps-2 lg:hidden font-extrabold" ><code>Mail</code> </p>
  

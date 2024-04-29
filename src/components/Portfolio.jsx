@@ -1,25 +1,46 @@
-import React,  from "react";
+
 import { motion } from "framer-motion";
+
+const textVariant = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const items = [
   {
     id: 1,
-    title: "Project1",
-    description: "lorem hdch d dhvchd jdvcdshc dc dhdvsdh dhs jsdhvh hgcihas dhcvsdc sdhcvsdc hsdvdshc hbvsdh bj",
-    technologies: "NEXT.JS, HTML, CSS AND REACT",
+    title: "Movie Search App",
+    description: "A search application leveraging an API to retrieve TV show data from a database.Showing detailed information about a wide range of TV series.",
+    technologies: "REACT,AXIOS,REACT-ROUTER,TAILWIND",
+    code:"https://github.com/Yray-6/Movieapp/blob/master/src/App.jsx",
+    link:"https://movieapp-virid-gamma.vercel.app/"
   },
   {
     id: 2,
-    title: "Project2",
+    title: "Get-Linked Hackathon",
     description:
-      "lorem hdch d dhvchd jdvcdshc dc dhdvsdh dhs jsdhvh hgcihas dhcvsdc sdhcvsdc hsdvdshc hbvsdh bj",
-    technologies: "NEXT.JS, HTML, CSS AND REACT",
+      "A Figma file from a hackathon was implemented into a functional application.Real-world APIs were seamlessly integrated to enable content submission and retrieval.",
+    technologies: "REACT,AXIOS,REACT-ROUTER,TAILWIND",
+    code:"https://github.com/Yray-6/getlinked/blob/main/src/App.jsx",
+    link:"https://getlinked-gules.vercel.app"
   },
   {
     id: 3,
-    title: "Project311",
-    description: "lorem hdch d dhvchd jdvcdshc dc dhdvsdh dhs jsdhvh hgcihas dhcvsdc sdhcvsdc hsdvdshc hbvsdh bj",
-    technologies: "NEXT.JS, HTML, CSS AND REACT",
+    title: "Consultino",
+    description: "An Elementor template was recreated and cloned, focusing on ensuring responsiveness,compatibility across various devices and browsers.",
+    technologies: "HTML,CSS,BOOTSTRAP, JAVASCRIPT",
+    code:"https://github.com/Yray-6/consultino/blob/main/index.html",
+    link:"https://consultino.vercel.app/"
   },
   {
     id: 4,
@@ -31,32 +52,33 @@ const items = [
 
 export default function Portfolio() {
   return (
-    <div className="relative bg-bgs grid gap-8 lg:p-20 p-5 lg:grid-cols-2 lg:h-screen bg-gradient-to-b from-bgs to to-bgs1">
+    <motion.div initial="initial" animate="animate" className="relative bg-bgs grid gap-8 lg:p-20 p-5 lg:grid-cols-2 lg:h-screen bg-gradient-to-b from-bgs to to-bgs1">
       {items.map((item) => (
         <SingleChild item={item} key={item.id} />
       ))}
-    </div>
+    </motion.div>
   );
 }
 
 function SingleChild({ item }) {
   return (
     <motion.div
-      className="flex justify-center items-center overflow-hidden w-full h-full dark:bg-gradient-to-b dark:from-white bg-bgs1 dark:to-gray-300 py-9 px-3"
+      className="flex justify-center items-center overflow-hidden w-full h-full dark:bg-gradient-to-b dark:from-white bg-bgs1 dark:to-gray-300 lg:py-9 py-4 px-3"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
+      variants={textVariant}
     >
       <div className=" max-w-[1366px] h-[100%] lg:justify-center flex flex-col lg:flex-row  lg:px-10  lg:gap-[10px] gap-[10px] lg:m-auto items-center">
         <motion.div className=" flex flex-col lg:gap-[15px] gap-[15px] lg:text-left text-center">
-          <p className="lg:text-[42px] text-[30px] text-gray-100">
+          <p className="lg:text-[42px] text-[26px] text-gray-100">
             <code>{item.title}</code>
           </p>
-          <p className="text-gray-300 tracking-[0.5rem]">{item.technologies}</p>
-          <p className=" text-gray-500 dark:text-bgs text-[20px]">
+          <p className="text-gray-300 lg:tracking-[0.5rem] tracking-[0.4rem]">{item.technologies}</p>
+          <p className=" text-gray-500 lg:block hidden dark:text-bgs text-[20px]">
             <code>{item.description}</code>
           </p>
           <div className="flex flex-row justify-between px-5">
-            <button className="lg:self-start self-center flex items-center  lg:py-[20px] py-[10px] hover:text-purple-500 text-gray-300 text-[12px] gap-2 font-bold rounded">
+            <a href={item.link} target="_blank" className="lg:self-start self-center flex items-center  lg:py-[20px] py-[10px] hover:text-purple-500 text-gray-300 text-[12px] gap-2 font-bold rounded">
               <svg
                 fill="#ffffff"
                 version="1.1"
@@ -96,8 +118,8 @@ function SingleChild({ item }) {
                 </g>
               </svg>{" "}
               Demo
-            </button>
-            <button className="lg:self-start  flex items-center hover:text-purple-500 lg:py-[20px] py-[10px] text-gray-300 text-[12px] gap-2 font-bold rounded">
+            </a>
+            <a href={item.code} target="_blank" className="lg:self-start  flex items-center hover:text-purple-500 lg:py-[20px] py-[10px] text-gray-300 text-[12px] gap-2 font-bold rounded">
               <svg
                 width="25px"
                 height="25px"
@@ -114,7 +136,7 @@ function SingleChild({ item }) {
                 />
               </svg>
               Code
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

@@ -137,8 +137,8 @@ export default function Hero() {
         >
           Oghenevwaire David Onobrudu Frontend Developer
         </motion.div>
-        <motion.div className="absolute lg:top-[15%] lg:right-[7%] lg:h-[500px] lg:w-[500px] top-[0%] right-[25%] w-[200px] rounded-full h-[50%]  bottom-0">
-          <motion.img src="/profilep1.png" alt="My image" className="lg:w-[600px] w-[200px] rounded-full object-contain grayscale" />
+        <motion.div className="absolute lg:top-[15%] lg:right-[7%] lg:h-[500px] lg:w-[500px] top-[0%] md:right-[35%] right-[25%] w-[200px] rounded-full h-[50%]  bottom-0">
+          <motion.img src="/profilep1.png" alt="My image" className="lg:w-[600px] md:w-[300px] w-[200px] rounded-full object-contain grayscale" />
         </motion.div>
       </motion.div>
     </motion.div>

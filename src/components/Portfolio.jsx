@@ -52,18 +52,21 @@ const items = [
 
 export default function Portfolio() {
   return (
-    <motion.div initial="initial" animate="animate" className="relative bg-bgs grid gap-8 lg:p-20 p-5 lg:grid-cols-2 lg:h-screen bg-gradient-to-b from-bgs to to-bgs1">
+    <div className="md:h-screen bg-gradient-to-b from-bgs to to-bgs1">
+      <motion.div initial="initial" animate="animate" className="relative  grid gap-8 lg:p-20 p-5 lg:grid-cols-2 lg:h-screen ">
       {items.map((item) => (
         <SingleChild item={item} key={item.id} />
       ))}
     </motion.div>
+    </div>
+    
   );
 }
 
 function SingleChild({ item }) {
   return (
     <motion.div
-      className="flex justify-center items-center overflow-hidden w-full h-full dark:bg-gradient-to-b dark:from-white bg-bgs1 dark:to-gray-300 lg:py-9 py-4 px-3"
+      className="flex justify-center items-center  overflow-hidden w-full h-full dark:bg-gradient-to-b dark:from-white bg-bgs1 dark:to-gray-300 lg:py-9 py-4 px-3"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
       variants={textVariant}

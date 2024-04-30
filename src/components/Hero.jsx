@@ -48,11 +48,11 @@ export default function Hero() {
     >
       <motion.div className="m-auto lg:px-16 max-w-[1366px] dark:bg-transparent h-[100%]">
         <motion.div
-          className="flex flex-col gap-[20px] w-[100%] lg:w-[60%] mt-36 text-center lg:text-left h-[50%] lg:justify-center  lg:mt-36"
+          className="flex flex-col gap-[20px] max-[390px]:gap-[10px] w-[100%] lg:w-[60%] mt-36 text-center lg:text-left h-[50%] lg:justify-center  lg:mt-36"
           variants={textVariant}
         >
           <motion.h2
-            className=" lg:text-[29px] text-[23px] font-bold text-gray-300 tracking-[0.3rem]"
+            className=" lg:text-[29px] text-[23px] max-[390px]:text-[18px] font-bold text-gray-300 tracking-[0.3rem] max-[390px]:tracking-[0.2rem]"
             variants={textVariant}
           >
             <code className="text-purple-800 lg:whitespace-nowrap">
@@ -63,42 +63,48 @@ export default function Hero() {
           </motion.h2>
 
           <motion.div className=" lg:text-lg  lg:bg-bgs lg:p-4 px-5 lg:rounded-xl lg:shadow-cus lg:mt-5 ">
-            <code className="lg:hidden">
+            <code className="lg:hidden  max-[390px]:text-[0.8rem]">
               I'm Oghenevwaire, a frontend developer passionate about creating
               great web experiences. With 2 years of experience focused on
               building fast and responsive client interface to meet the need of
-              businesses and users using technologies like html, css and js. 
+              businesses and users using technologies like html, css and js.
             </code>
             <code className="lg:block hidden">
               Hey there, I'm Oghenevwaire, a frontend developer who loves
               crafting awesome web experiences. With 2 years of experience, I
-              specialize in <span className=" font-extrabold">HTML</span>,<span className=" font-extrabold">CSS</span> , and <span className=" font-extrabold">JavaScript</span>, always exploring new ways
-              to make websites shine. I'm all about building sites that work
-              seamlessly on any device and load lightning fast. I'm constantly
-              learning, keeping up with cool tech like React and Next.js. I'm a
-              team player, detail-oriented, and ready to collaborate on
-              something awesome. Let's build something together!.
+              specialize in <span className=" font-extrabold">HTML</span>,
+              <span className=" font-extrabold">CSS</span> , and{" "}
+              <span className=" font-extrabold">JavaScript</span>, always
+              exploring new ways to make websites shine. I'm all about building
+              sites that work seamlessly on any device and load lightning fast.
+              I'm constantly learning, keeping up with cool tech like React and
+              Next.js. I'm a team player, detail-oriented, and ready to
+              collaborate on something awesome. Let's build something together!.
             </code>
           </motion.div>
           {/* <motion.p className=" lg:text-[80px] text-[36px] font-bold" variants={textVariant}>
             Frontend Web <br></br> Developer
           </motion.p> */}
           <motion.div
-            className="flex gap-[100px] justify-center lg:justify-start mt-9  lg:px-0"
+            className="flex gap-[100px] justify-center lg:justify-start lg:mt-9 px-4 mt-4  lg:px-0"
             variants={textVariant}
           >
-            <motion.a href="/cv.pdf" download
-              className=" lg:text-xl text-purple-700 hover:glow   font-bold cursor-pointer"
+            <motion.a
+              href="/cv.pdf"
+              download
+              className=" lg:text-xl text-purple-700 hover:glow  max-[390px]:text-[0.8rem] whitespace-nowrap  font-bold cursor-pointer"
               variants={textVariant}
             >
               <code>&lt;Download Resume/&gt;</code>
             </motion.a>
             <motion.a
-              className="lg:text-xl rounded-xl hover:glow text-purple-700 dark:text-white font-bold cursor-pointer"
+              className="lg:text-xl rounded-xl hover:glow text-purple-700 max-[390px]:text-[0.8rem] whitespace-nowrap dark:text-white font-bold cursor-pointer"
               variants={textVariant}
               href="#Portfolio"
             >
-              <NavLink to="Portfolio"><code>&lt;My Works/&gt;</code></NavLink>
+              <NavLink to="Portfolio">
+                <code>&lt;My Works/&gt;</code>
+              </NavLink>
             </motion.a>
           </motion.div>
 
@@ -110,27 +116,57 @@ export default function Hero() {
             animate="scrollButton"
           />
           <div className="flex flex-row justify-center lg:justify-start absolute lg:relative lg:bottom-0 bottom-5 w-full  lg:gap-[30px] gap-3   lg:m-0 ">
-            <a className="flex flex-row items-center cursor-pointer hover:text-purple-600" href="https://github.com/Yray-6" target="_blank">
-            <img src="/github.png" alt="" className="w-[30px] h-[30px]"/>
-              <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold"><code>Visit My Github Profile</code>  </p>
-              <p className="lg:pe-5 ps-2 lg:hidden font-extrabold"><code>Github</code> </p>
+            <a
+              className="flex flex-row items-center cursor-pointer hover:text-purple-600"
+              href="https://github.com/Yray-6"
+              target="_blank"
+            >
+              <img
+                src="/github.png"
+                alt=""
+                className="w-[30px] h-[30px] max-[390px]:h-[20px] max-[390px]:w-[20px]"
+              />
+              <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold">
+                <code>Visit My Github Profile</code>{" "}
+              </p>
+              <p className="lg:pe-5 ps-2 lg:hidden font-extrabold max-[390px]:text-[0.9rem]">
+                <code>Github</code>{" "}
+              </p>
             </a>
-            <a className="flex flex-row items-center cursor-pointer hover:text-purple-600 lg:m-0 " href="https://linkedin.com/in/oghenevwaire-onobrudu-b56908262" target="_blank">
-            <img src="/linkedin.png" alt="" className="w-[30px] h-[30px]"/>
-            <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold"><code>Linkedin</code>  </p>
-            <p className="lg:pe-5 ps-2 lg:hidden font-extrabold"><code>Linkedin</code> </p>
- 
+            <a
+              className="flex flex-row items-center cursor-pointer hover:text-purple-600 lg:m-0 "
+              href="https://linkedin.com/in/oghenevwaire-onobrudu-b56908262"
+              target="_blank"
+            >
+              <img
+                src="/linkedin.png"
+                alt=""
+                className="w-[30px] h-[30px] max-[390px]:h-[20px] max-[390px]:w-[20px]"
+              />
+              <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold ">
+                <code>Linkedin</code>{" "}
+              </p>
+              <p className="lg:pe-5 ps-2 lg:hidden font-extrabold max-[390px]:text-[0.9rem]">
+                <code>Linkedin</code>{" "}
+              </p>
             </a>
             <a className="flex flex-row items-center cursor-pointer hover:text-purple-600 lg:m-0">
-            <img src="/gmail.png" alt="" className="w-[30px] h-[30px]"/>
-            <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold"><code>Send me a Mail</code></p>
-            <p className="lg:pe-5 ps-2 lg:hidden font-extrabold" ><code>Mail</code> </p>
- 
+              <img
+                src="/gmail.png"
+                alt=""
+                className="w-[30px] h-[30px] max-[390px]:h-[20px] max-[390px]:w-[20px]"
+              />
+              <p className="lg:pe-5 ps-2 lg:block hidden font-extrabold">
+                <code>Send me a Mail</code>
+              </p>
+              <p className="lg:pe-5 ps-2 lg:hidden font-extrabold max-[390px]:text-[0.9rem]">
+                <code>Mail</code>{" "}
+              </p>
             </a>
           </div>
         </motion.div>
         <motion.div
-          className="absolute lg:text-[50vh] text-[20vh]  lg:bottom-[-100px] dark:text-gray-400 -z-10 feint whitespace-nowrap w-[50%] font-bold"
+          className="absolute lg:text-[50vh] text-[20vh] max-[390px]:text-[15vh]  lg:bottom-[-100px] dark:text-gray-400 -z-10 feint whitespace-nowrap w-[50%] font-bold"
           variants={sliderVariant}
           initial="initial"
           animate="animate"
@@ -138,7 +174,11 @@ export default function Hero() {
           Oghenevwaire David Onobrudu Frontend Developer
         </motion.div>
         <motion.div className="absolute lg:top-[15%] lg:right-[7%] lg:h-[500px] lg:w-[500px] top-[0%] md:right-[35%] right-[25%] w-[200px] rounded-full h-[50%]  bottom-0">
-          <motion.img src="/profilep1.png" alt="My image" className="lg:w-[600px] md:w-[300px] w-[200px] rounded-full object-contain grayscale" />
+          <motion.img
+            src="/profilep1.png"
+            alt="My image"
+            className="lg:w-[600px] md:w-[300px] w-[200px] rounded-full object-contain grayscale"
+          />
         </motion.div>
       </motion.div>
     </motion.div>

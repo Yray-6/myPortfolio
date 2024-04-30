@@ -52,7 +52,7 @@ const items = [
 
 export default function Portfolio() {
   return (
-    <div className="md:h-screen bg-gradient-to-b from-bgs to to-bgs1">
+    <div className="md:h-screen bg-gradient-to-b from-bgs to to-bgs1 max-[390px]:pt-16">
       <motion.div initial="initial" animate="animate" className="relative  grid gap-8 lg:p-20 p-5 lg:grid-cols-2 lg:h-screen ">
       {items.map((item) => (
         <SingleChild item={item} key={item.id} />
@@ -73,15 +73,15 @@ function SingleChild({ item }) {
     >
       <div className=" max-w-[1366px] h-[100%] lg:justify-center flex flex-col lg:flex-row  lg:px-10  lg:gap-[10px] gap-[10px] lg:m-auto items-center">
         <motion.div className=" flex flex-col lg:gap-[15px] gap-[15px] lg:text-left text-center">
-          <p className="lg:text-[42px] text-[26px] text-gray-100">
+          <p className="lg:text-[42px] text-[26px] max-[390px]:text-[20px] text-gray-100">
             <code>{item.title}</code>
           </p>
-          <p className="text-gray-300 lg:tracking-[0.5rem] tracking-[0.4rem]">{item.technologies}</p>
-          <p className=" text-gray-500 lg:block hidden dark:text-bgs text-[20px]">
+          <p className="text-gray-300 lg:tracking-[0.5rem] max-[390px]:text-[12px] tracking-[0.4rem]">{item.technologies}</p>
+          <p className=" text-gray-500 lg:block hidden dark:text-bgs text-[20px] ">
             <code>{item.description}</code>
           </p>
           <div className="flex flex-row justify-between px-5">
-            <a href={item.link} target="_blank" className="lg:self-start self-center flex items-center  lg:py-[20px] py-[10px] hover:text-purple-500 text-gray-300 text-[12px] gap-2 font-bold rounded">
+            <a href={item.link} target="_blank" className="lg:self-start self-center flex items-center  lg:py-[20px] py-[10px] hover:text-purple-500 text-gray-300 text-[12px] max-[390px]:text-[10px] gap-2 font-bold rounded">
               <svg
                 fill="#ffffff"
                 version="1.1"
@@ -122,7 +122,7 @@ function SingleChild({ item }) {
               </svg>{" "}
               Demo
             </a>
-            <a href={item.code} target="_blank" className="lg:self-start  flex items-center hover:text-purple-500 lg:py-[20px] py-[10px] text-gray-300 text-[12px] gap-2 font-bold rounded">
+            <a href={item.code} target="_blank" className="lg:self-start  flex items-center hover:text-purple-500 lg:py-[20px] py-[10px] text-gray-300 text-[12px] max-[390px]:text-[10px] gap-2 font-bold rounded">
               <svg
                 width="25px"
                 height="25px"

@@ -17,13 +17,13 @@ export default function Navbar() {
         </motion.span>
         <div className=" flex lg:gap-8 gap-5">
           <a href="https://linkedin.com/in/oghenevwaire-onobrudu-b56908262" target="_blank">
-            <img src="/linkedin.png" className="w-[30px] h-[30px]" />
+            <img src="/linkedin.png" className="w-[30px] h-[30px] max-[390px]:h-[20px] max-[390px]:w-[20px]" />
           </a>
           <a >
-            <img src="/github.png" className="w-[30px] h-[30px]" />
+            <img src="/github.png" className="w-[30px] h-[30px] max-[390px]:h-[20px] max-[390px]:w-[20px]" />
           </a>
           <a href="mailto:vwaireonobrudu@gmail.com">
-            <img src="/gmail.png" className="w-[30px] h-[30px]" />
+            <img src="/gmail.png" className="w-[30px] h-[30px] max-[390px]:h-[20px] max-[390px]:w-[20px]" />
           </a>
         </div>
       </div>

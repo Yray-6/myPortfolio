@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export default function Togglebutton({setOpen}) {
   return (
     <div>
-        <button onClick={()=>setOpen(prev =>!prev)} className='w-[50px] h-[50px] fixed rounded-[50px] z-[9999] left-[35px] top-[25px] bg-transparent'>
+        <button onClick={()=>setOpen(prev =>!prev)} className='w-[50px] h-[50px] fixed rounded-[50px] z-[9999] left-[37px] top-[26px] bg-transparent'>
             <svg width="25" height="23" viewBox='0 0 23 23'>
                 <motion.path strokeWidth="3" stroke='black' strokeLinecap='round'
                 variants={{

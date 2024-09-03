@@ -44,16 +44,16 @@ const items = [
   },
   {
     id: 4,
-    title: "Project4",
-    description: "lorem hdch d dhvchd jdvcdshc dc dhdvsdh dhs jsdhvh",
+    title: "GIWOST",
+    description: "lorem sjvch chc cashc sahcsnc sahcsachsd chsacsa hc csahcv sdhc sdc ids cshadchidsc shchd",
     technologies: "NEXT.JS, HTML, CSS AND REACT",
   },
 ];
 
 export default function Portfolio() {
   return (
-    <div className="md:h-screen bg-gradient-to-b from-bgs to to-bgs1 max-[390px]:pt-16">
-      <motion.div initial="initial" animate="animate" className="relative  grid gap-8 lg:p-20 p-5 lg:grid-cols-2 lg:h-screen ">
+    <div className=" bg-gradient-to-b from-bgs to to-bgs1 max-[900px]:pt-16">
+      <motion.div initial="initial" animate="animate" className="relative  grid gap-8 lg:p-20 p-5 lg:grid-cols-2 ">
       {items.map((item) => (
         <SingleChild item={item} key={item.id} />
       ))}
@@ -66,18 +66,18 @@ export default function Portfolio() {
 function SingleChild({ item }) {
   return (
     <motion.div
-      className="flex justify-center items-center  overflow-hidden w-full h-full dark:bg-gradient-to-b dark:from-white bg-bgs1 dark:to-gray-300 lg:py-9 py-4 px-3"
+      className="flex justify-center   overflow-hidden w-full dark:bg-gradient-to-b dark:from-white bg-bgs1 dark:to-gray-300 lg:py-5 py-4 px-3"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
       variants={textVariant}
     >
-      <div className=" max-w-[1366px] h-[100%] lg:justify-center flex flex-col lg:flex-row  lg:px-10  lg:gap-[10px] gap-[10px] lg:m-auto items-center">
-        <motion.div className=" flex flex-col lg:gap-[15px] gap-[15px] lg:text-left text-center">
-          <p className="lg:text-[42px] text-[26px] max-[390px]:text-[20px] text-gray-100">
+      <div className=" max-w-[1366px]  lg:justify-center flex flex-col lg:flex-row  lg:px-10  lg:gap-[10px] gap-[10px] ">
+        <motion.div className=" flex flex-col lg:gap-[10px] gap-[15px] lg:text-left text-center">
+          <p className="xl:text-[35px] lg:text-[28px] text-[26px] max-[390px]:text-[20px] text-gray-100">
             <code>{item.title}</code>
           </p>
-          <p className="text-gray-300 lg:tracking-[0.5rem] max-[390px]:text-[12px] tracking-[0.4rem]">{item.technologies}</p>
-          <p className=" text-gray-500 lg:block hidden dark:text-bgs text-[20px] ">
+          <p className="text-gray-300 lg:tracking-[0.3rem] max-[390px]:text-[12px] lg:text-[13px] tracking-[0.4rem]">{item.technologies}</p>
+          <p className=" text-gray-500 lg:block hidden dark:text-bgs text-[15px] lg:min-h-[130px] xl:min-h-[90px]">
             <code>{item.description}</code>
           </p>
           <div className="flex flex-row justify-between px-5">
